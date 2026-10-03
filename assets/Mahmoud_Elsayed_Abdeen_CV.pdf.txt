@@ -1,0 +1,108 @@
+MAHMOUD ELSAYED ABDEEN ELRAWI
+Senior IT Support Specialist | Technical Support Engineer | Network & Telecom Operations
+Location: Qena, Egypt | Phone: +20 10 67853308 | Email: katousabdeen@gmail.com | LinkedIn:
+linkedin.com/in/mahmoud-abdeen-a4476038b
+Nationality: Egyptian | Work Authorization: Open to International Relocation (Requires Employer Visa Sponsorship)
+PROFESSIONAL SUMMARY
+Results-driven Technical Support Engineer and IT Support Specialist with over 5 years of progressive experience across enterprise IT
+environments, international customer operations, and major telecommunications infrastructure. Proven expertise in multi-platform system
+administration (Windows, macOS, Active Directory, Azure AD), end-to-end network connectivity troubleshooting (TCP/IP, DNS, DHCP,
+VPN, Router/Switch configuration), and telecom broadband operations (ADSL/VDSL, Fiber, Fixed Line, SELT diagnostics). Experience
+spans delivering tier-1/tier-2 remote IT support for 200+ international remote workers across Europe and the GCC at Orange Business
+Services, leading technical operations teams at Telecom Egypt (WE), and performing field service activation at Vodafone Egypt.
+Experienced in utilizing ITIL service management frameworks, ServiceNow, Jira, and telecom BSS/OSS suites to drive high customer
+satisfaction, optimize ticket resolution, and resolve complex technical escalations.
+CORE TECHNICAL SKILLS
+IT Support & Systems: Windows 10/11, Windows Server, macOS, Active Directory, Azure AD, User Accounts & Permissions, Group Policy
+(GPO), Hardware/Software Diagnostics, Remote Support, ITIL 4 Framework.
+Networking & Connectivity: TCP/IP, DNS, DHCP, VPN, LAN/WAN, Wi-Fi Configuration, Router & Switch Configuration, VLAN
+Fundamentals, Port Forwarding, Connectivity Diagnostics.
+Telecom & Broadband: Fixed Line, ADSL/VDSL, Broadband, Fiber Optics, VoIP, DSL Diagnostics, SELT (Single-Ended Line Testing),
+SNR, Line Attenuation, Sync Speed, Line Errors.
+Telecom Platforms: ServiceNow, Jira, Customer360, Matrix, Assia (DSL Diagnostic Suite), TTS (Trouble Ticketing System), BSS, CRM.
+Service Operations: Incident Management, SLA Management, Technical Ticket Lifecycle, Work Order Execution, Technical Escalation
+Management, Onsite Activation.
+Web & Database Fundamentals: Domain Registration & DNS Setup, Web Hosting Configuration, Basic Website Deployment, Basic SQL
+Querying, Website Database Troubleshooting.
+Technical Fundamentals: Linux Fundamentals, Microsoft Azure Fundamentals (AZ-900), AWS Fundamentals (In Progress), PowerShell
+Fundamentals, Python Fundamentals, HTML/CSS, Basic Cybersecurity.
+PROFESSIONAL EXPERIENCE
+Technical Support Representative (Field Service Activation & Onsite Technical Support)
+Vodafone Egypt — Qena, Egypt
+Jan 2026 – Present
+• Execute company-issued work orders for residential and commercial customers, performing on-site technical visits to ensure complete
+service deployment and connectivity.
+• Complete required customer contracts and administrative documentation accurately prior to hardware installation and service turn-up.
+• Deliver, position, and physically install customer premises equipment (CPE), including broadband routers, access points, and terminal
+hardware.
+• Perform end-to-end broadband service activation procedures, configuring router settings, WAN/LAN interfaces, and wireless credentials.
+• Leverage technical telecom diagnostic background to troubleshoot physical and logical connectivity issues at customer premises, verifying
+full operational stability before work order closure.
+Team Leader – Technical Operations
+Telecom Egypt (WE) — Qena, Egypt
+Jun 2022 – Jan 2026
+• Led technical operations and escalated support workflows across Fixed Line, Internet, Broadband (ADSL/VDSL), Fiber, and VoIP services.
+• Mentored and coached junior technical support agents on advanced connectivity troubleshooting, line diagnostics, and customer interaction
+standards.
+• Performed deep-dive line diagnostics using Single-Ended Line Testing (SELT / Run SELT) to evaluate Signal-to-Noise Ratio (SNR), line
+attenuation, synchronization speed, DSL status, service profiles, and line error logs.
+• Utilized Assia diagnostic software for broadband performance analysis, Customer360 for account investigations, Matrix for service
+operations, TTS for trouble ticket tracking, BSS for service requests, and CRM for account provisioning.
+• Managed fixed-line activation and reactivation workflows, resolving complex account suspension issues following billing reconciliation via
+CRM.
+• Executed provisioning and request handling for specialized fixed-line services, including 0900 premium lines and commercial fax
+configurations.
+• Collaborated directly with tier-3 network engineering teams during widespread regional service outages affecting 1,000+ end-users,
+coordinating incident tracking and rapid resolution.
+• Resolved end-user network configuration challenges involving customer routers, DNS resolution, DHCP pools, TCP/IP parameters, and
+VPN connections.
+• Key Achievement: Identified a critical billing-module operational bottleneck within CRM/BSS, developing an optimized workflow that
+saved 10+ hours of manual administrative work per week.
+
+Senior Customer Service Agent
+Telecom Egypt (WE) — Qena, Egypt
+Mar 2022 – Jun 2022
+• Provided technical support for residential customers encountering faults across Fixed Line, ADSL/VDSL Broadband, and VoIP
+infrastructure.
+• Conducted customer-facing troubleshooting protocols to isolate issues related to local wiring, router configurations, and authentication
+failures.
+• Utilized enterprise CRM and BSS platforms to retrieve subscriber profile data, audit service statuses, and initiate service modification
+requests.
+• Logged, classified, and managed technical trouble tickets and Service Requests within the internal ticketing environment.
+• Supported fixed-line activation and reactivation processes, facilitating smooth transition of suspended customer lines back into active
+status.
+• Escalated complex physical line faults and equipment failures to field engineering and technical operations teams, maintaining ownership
+through resolution.
+IT Support Specialist
+Orange Business Services — Qena, Egypt
+Jan 2021 – Feb 2022
+• Delivered remote IT support and service desk assistance to international enterprise clients across Europe and the GCC region.
+• Supported over 200 remote workers in multi-platform environments containing Windows 10/11 and macOS operating systems.
+• Administered user accounts, group memberships, elevated permissions, and security policies within Active Directory (AD) and Azure Active
+Directory (Azure AD).
+• Troubleshot network layer issues impacting remote connectivity, resolving client DNS assignment errors, DHCP lease failures, and VPN
+gateway connection drops.
+• Utilized ServiceNow for end-to-end incident logging, ticket categorization, SLA monitoring, and resolution documentation, utilizing
+Microsoft Teams for user communication.
+• Performed initial hardware and software diagnostic routines, escalating specialized server and infrastructure tickets to appropriate tier-3
+teams.
+• Key Achievement: Recognized as Employee of the Month twice for operational excellence while consistently maintaining a 98%
+customer satisfaction rating.
+EDUCATION
+South Valley University — Qena, Egypt
+Bachelor's Degree in Public Law
+2015 – 2020
+*Technical qualifications and proficiency established through industry certifications, hands-on enterprise IT support experience, and multi-year telecom
+operations leadership.
+CERTIFICATIONS & PROFESSIONAL TRAINING
+• ITIL 4 Foundation — IT Service Management (2023) • Microsoft Certified: Azure Fundamentals (AZ-900) — (2024)
+• Google IT Support Professional Certificate — Coursera (2024) • Technical Support Fundamentals — Infrastructure & Networking
+• Managing Virtual Teams — Remote Leadership • Google Analytics Certified — Data Analysis & Reporting
+• Foundations: Data, Data, Everywhere — Coursera • AWS Certified Cloud Practitioner — (In Progress)
+LANGUAGES
+Arabic: Native | English: Intermediate (B1) — Professionally proficient in technical working environments | German: Basic (A1) —
+Currently studying
+
+[PDF page 1 image attached. Read this image directly to extract content.]
+
+[PDF page 2 image attached. Read this image directly to extract content.]
