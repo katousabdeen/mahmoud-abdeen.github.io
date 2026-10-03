@@ -1,0 +1,715 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Private Dashboard</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            min-height: 100vh;
+        }
+
+        /* LOGIN */
+        .login {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .login-box {
+            width: 100%;
+            max-width: 400px;
+            background: #1e293b;
+            padding: 35px;
+            border-radius: 16px;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, .35);
+            border: 1px solid #334155;
+        }
+
+        .login-box h1 {
+            margin-bottom: 10px;
+            font-size: 26px;
+        }
+
+        .login-box p {
+            color: #94a3b8;
+            margin-bottom: 25px;
+        }
+
+        input {
+            width: 100%;
+            padding: 13px;
+            border: 1px solid #475569;
+            border-radius: 8px;
+            background: #0f172a;
+            color: white;
+            margin-bottom: 12px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        input:focus {
+            border-color: #64748b;
+        }
+
+        button {
+            width: 100%;
+            padding: 13px;
+            border: 0;
+            border-radius: 8px;
+            background: #2563eb;
+            color: white;
+            font-size: 15px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #1d4ed8;
+        }
+
+        .error {
+            color: #f87171;
+            margin-top: 12px;
+            display: none;
+            font-size: 14px;
+        }
+
+        /* DASHBOARD */
+        .dashboard {
+            display: none;
+            padding: 30px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            gap: 20px;
+        }
+
+        .header h1 {
+            font-size: 30px;
+        }
+
+        .header p {
+            color: #94a3b8;
+            margin-top: 6px;
+        }
+
+        .logout {
+            width: auto;
+            padding: 10px 18px;
+            background: #334155;
+        }
+
+        .logout:hover {
+            background: #475569;
+        }
+
+        /* STAT CARDS */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(
+                auto-fit,
+                minmax(200px, 1fr)
+            );
+            gap: 18px;
+            margin-bottom: 30px;
+        }
+
+        .card {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 14px;
+            padding: 22px;
+        }
+
+        .card-title {
+            color: #94a3b8;
+            font-size: 14px;
+            margin-bottom: 10px;
+        }
+
+        .card-value {
+            font-size: 32px;
+            font-weight: bold;
+        }
+
+        /* SECTIONS */
+        .section {
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 14px;
+            padding: 22px;
+            margin-bottom: 20px;
+        }
+
+        .section h2 {
+            margin-bottom: 18px;
+            font-size: 20px;
+        }
+
+        /* TABLE */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 13px;
+            text-align: left;
+            border-bottom: 1px solid #334155;
+        }
+
+        th {
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+        td {
+            font-size: 14px;
+        }
+
+        .empty {
+            color: #94a3b8;
+            padding: 20px 0;
+        }
+
+        /* MOBILE */
+        @media (max-width: 600px) {
+
+            .dashboard {
+                padding: 18px;
+            }
+
+            .header {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .logout {
+                width: 100%;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            .card-value {
+                font-size: 27px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================
+         LOGIN SCREEN
+    ========================== -->
+
+    <div class="login" id="loginScreen">
+
+        <div class="login-box">
+
+            <h1>Private Dashboard</h1>
+
+            <p>
+                Authorized access only.
+            </p>
+
+            <input
+                type="password"
+                id="password"
+                placeholder="Enter password"
+                autocomplete="current-password"
+            >
+
+            <button onclick="login()">
+                Login
+            </button>
+
+            <div
+                class="error"
+                id="error"
+            >
+                Incorrect password.
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         DASHBOARD
+    ========================== -->
+
+    <div
+        class="dashboard"
+        id="dashboard"
+    >
+
+        <div class="header">
+
+            <div>
+
+                <h1>
+                    Portfolio Analytics
+                </h1>
+
+                <p>
+                    Private visitor dashboard
+                </p>
+
+            </div>
+
+            <button
+                class="logout"
+                onclick="logout()"
+            >
+                Logout
+            </button>
+
+        </div>
+
+
+        <!-- =========================
+             STATISTICS
+        ========================== -->
+
+        <div class="cards">
+
+            <div class="card">
+
+                <div class="card-title">
+                    Total Visits
+                </div>
+
+                <div
+                    class="card-value"
+                    id="totalVisits"
+                >
+                    —
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-title">
+                    Unique Visitors
+                </div>
+
+                <div
+                    class="card-value"
+                    id="uniqueVisitors"
+                >
+                    —
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-title">
+                    Countries
+                </div>
+
+                <div
+                    class="card-value"
+                    id="countries"
+                >
+                    —
+                </div>
+
+            </div>
+
+
+            <div class="card">
+
+                <div class="card-title">
+                    Today
+                </div>
+
+                <div
+                    class="card-value"
+                    id="today"
+                >
+                    —
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             COUNTRIES
+        ========================== -->
+
+        <div class="section">
+
+            <h2>
+                Visitors by Country
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Country</th>
+                        <th>Visits</th>
+                        <th>Percentage</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="countryTable">
+
+                    <tr>
+
+                        <td
+                            colspan="3"
+                            class="empty"
+                        >
+                            Analytics data will appear here
+                            after connecting an analytics service.
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- =========================
+             TRAFFIC SOURCES
+        ========================== -->
+
+        <div class="section">
+
+            <h2>
+                Traffic Sources
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Source</th>
+                        <th>Visits</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="sourceTable">
+
+                    <tr>
+
+                        <td
+                            colspan="2"
+                            class="empty"
+                        >
+                            No analytics data connected yet.
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+        <!-- =========================
+             DEVICES
+        ========================== -->
+
+        <div class="section">
+
+            <h2>
+                Devices
+            </h2>
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Device</th>
+                        <th>Visits</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="deviceTable">
+
+                    <tr>
+
+                        <td
+                            colspan="2"
+                            class="empty"
+                        >
+                            No analytics data connected yet.
+                        </td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+        /*
+         * =========================================
+         * PASSWORD PROTECTION
+         * =========================================
+         *
+         * Actual password:
+         *
+         * 23052305
+         *
+         * It is NOT stored here as plaintext.
+         *
+         * SHA-256:
+         *
+         * 2469f8bae6d6d805542b0c9e2e5dfbfda974b090fb97cc2bea1300f3a3a847fa
+         */
+
+        const PASSWORD_HASH =
+            "2469f8bae6d6d805542b0c9e2e5dfbfda974b090fb97cc2bea1300f3a3a847fa";
+
+
+        /*
+         * Convert text to SHA-256
+         */
+
+        async function sha256(text) {
+
+            const data =
+                new TextEncoder().encode(text);
+
+            const hashBuffer =
+                await crypto.subtle.digest(
+                    "SHA-256",
+                    data
+                );
+
+            const hashArray =
+                Array.from(
+                    new Uint8Array(hashBuffer)
+                );
+
+            return hashArray
+                .map(
+                    byte =>
+                        byte
+                            .toString(16)
+                            .padStart(2, "0")
+                )
+                .join("");
+
+        }
+
+
+        /*
+         * LOGIN
+         */
+
+        async function login() {
+
+            const password =
+                document
+                    .getElementById("password")
+                    .value;
+
+            const error =
+                document
+                    .getElementById("error");
+
+            error.style.display = "none";
+
+
+            if (!password) {
+
+                error.textContent =
+                    "Please enter your password.";
+
+                error.style.display = "block";
+
+                return;
+            }
+
+
+            const enteredHash =
+                await sha256(password);
+
+
+            if (
+                enteredHash === PASSWORD_HASH
+            ) {
+
+                sessionStorage.setItem(
+                    "dashboard_authenticated",
+                    "true"
+                );
+
+                showDashboard();
+
+            } else {
+
+                error.textContent =
+                    "Incorrect password.";
+
+                error.style.display =
+                    "block";
+
+            }
+
+        }
+
+
+        /*
+         * SHOW DASHBOARD
+         */
+
+        function showDashboard() {
+
+            document
+                .getElementById("loginScreen")
+                .style.display = "none";
+
+
+            document
+                .getElementById("dashboard")
+                .style.display = "block";
+
+
+            loadAnalytics();
+
+        }
+
+
+        /*
+         * LOGOUT
+         */
+
+        function logout() {
+
+            sessionStorage.removeItem(
+                "dashboard_authenticated"
+            );
+
+            location.reload();
+
+        }
+
+
+        /*
+         * ANALYTICS PLACEHOLDER
+         *
+         * This section will later connect
+         * to a real analytics provider.
+         */
+
+        function loadAnalytics() {
+
+            document
+                .getElementById("totalVisits")
+                .textContent = "—";
+
+
+            document
+                .getElementById("uniqueVisitors")
+                .textContent = "—";
+
+
+            document
+                .getElementById("countries")
+                .textContent = "—";
+
+
+            document
+                .getElementById("today")
+                .textContent = "—";
+
+        }
+
+
+        /*
+         * ENTER KEY LOGIN
+         */
+
+        document
+            .getElementById("password")
+            .addEventListener(
+                "keydown",
+                function(event) {
+
+                    if (event.key === "Enter") {
+
+                        login();
+
+                    }
+
+                }
+            );
+
+
+        /*
+         * RESTORE LOGIN DURING
+         * CURRENT BROWSER SESSION
+         */
+
+        if (
+            sessionStorage.getItem(
+                "dashboard_authenticated"
+            ) === "true"
+        ) {
+
+            showDashboard();
+
+        }
+
+    </script>
+
+</body>
+</html>
+```
